@@ -162,15 +162,27 @@ navbar .logo a:hover{
  }
  .navbar .toggle_btn {
   display: block;
-  color: white;
- }
+  color: white;#42445A
+  }
  .dropdown_menu {
   display: block;
  }
 }
+ @media (min-width: 800px) {
+  .content{
+   margin-left: 32%;
+   padding-top: 12px;
+   padding-bottom: 12px;
+  }
+  .container{
+   padding-top: 80px;
+   padding-left: 20px;
+   padding-right: 20px;
+  }
+ }
+  
 
 /*Water animation*/
-
 .content{
  position: relative;
 }
