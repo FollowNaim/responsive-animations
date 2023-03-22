@@ -1,0 +1,162 @@
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Inter', sans-serif;
+ 
+}
+
+body{
+ background-image: url(https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1065&q=80);
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-attachment: fixed;
+ background-color: grey;
+ background-position: center;
+}
+
+li{
+ list-style: none;
+}
+
+a{
+ text-decoration: none;
+ color: white;
+ font-size: 1rem;
+ transition: 0.3s ease;
+}
+
+a:hover{
+ color: orange;
+ font-size: 1.1rem;
+}
+
+header{
+ position: relative;
+ padding: 0 2rem;
+}
+
+.navbar{
+ justify-content: space-between;
+ display: flex;
+ align-items: center;
+ width: 100%;
+ height: 60px;
+ margin 0 25px;
+ max-width: 1200px;
+ margin: 0 auto;
+}
+
+.navbar .logo a{
+ font-size: 1.5rem;
+ font-weight: bold;
+}
+
+.navbar .links{
+ display: flex;
+ gap: 2rem;
+}
+
+.navbar .toggle_btn{
+ color: white;
+ font-size: 1.5rem;
+ cursor: pointer;
+ display: none;
+}
+
+.action_btn{
+ font-size: 1rem;
+ font-weight: bold;
+ padding: 0 2rem;
+ color: white;
+ background-color: darkorange;
+ border: 9px;
+ border-radius: 20px;
+ outline: none;
+ cursor: pointer;
+ transition: scale 0.2s ease;
+}
+
+.action_btn:hover{
+ scale: 1.05;
+ color: white;
+}
+
+.action_btn:active{
+ scale: 0.95;
+}
+
+/*Dropdown Menu*/
+.dropdown_menu {
+ display: flex;
+ position: absolute;
+ right: 2rem;
+ top: 60px;
+ width: 300px;
+ height: 0;
+ background-color: rgba(255, 255, 255, 0.1);
+ backdrop-filter: blur(20px);
+ border-radius: 15px;
+ overflow: hidden;
+ transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown_menu.open{
+ height: 240px;
+}
+.dropdown_menu li{
+ padding: 0.7rem;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.dropdown_menu .action_btn {
+ width: 100%;
+ display: flex;
+ justify-content: center;
+}
+
+#hero{
+ text-align: center;
+ justify-content: center;
+ align-items: center;
+ margin-top: 50%;
+ font-size: 40px;
+}
+
+#hero h1{
+ color: white;
+ padding-bottom: 12px;
+ width: auto;
+}
+#hero h6{
+ color: white;
+}
+#bl1{
+ color: darkred;
+}
+#bl2{
+ color: green;
+}
+#bl3{
+ color: orangered;
+}
+
+/*Resposive Design*/
+
+@media (max-width: 950px) {
+ .navbar .links,
+ .navbar .action_btn {
+ display: none; 
+ }
+ @media (max-width: 576px) {
+  left: 2rem;
+  width: unset;
+ }
+ .navbar .toggle_btn {
+  display: block;
+  color: white;
+ }
+ .dropdown_menu {
+  display: block;
+ }
+}
