@@ -135,10 +135,10 @@ navbar .logo a:hover{
  padding-bottom: 6px;#42445A
  width: auto;
 }
-#hero h6{
+/*#hero h6{
  margin-top: 113px;
  color: white;
-}
+}*/
 #bl1{
  color: darkred;
 }
@@ -338,4 +338,30 @@ navbar .logo a:hover{
 }
 .container>span:nth-child(36) {
  animation-delay: 9s;
+}
+
+/*Typing effect*/
+#hero h6{
+ margin-top: 113px;
+ color: white;
+ 
+}
+.typing{
+ overflow: hidden;
+ white-space: nowrap;
+ width: 20px;
+ padding-right: 5px;
+ text-transform: uppercase;
+ border-right: 3px solid red;
+ animation: typed 9s infinite, steps(24, end) forwards, blinking 1s infinite;
+}
+
+@keyframes typed {
+ from { width: 0 }
+ to { width: 100% }
+}
+@keyframes blinking {
+ 0% {border-right-color: transparent}
+ 50% {border-right-color: red}
+ 100% {border-right-color: transparent}
 }
